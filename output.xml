@@ -1,972 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230613 09:38:20.442" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230613 10:35:24.321" rpa="false" schemaversion="3">
 <suite id="s1" name="Project 1" source="/home/hanasrullah/Documents/QA-Automate/Project_1.robot">
-<test id="s1-t1" name="TC01: Login Deriv API" line="67">
+<test id="s1-t1" name="TC10: Copy paste token into application" line="132">
 <kw name="Log in to deriv">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://app.deriv.com</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230613 09:38:20.550" level="INFO">Opening browser 'Chrome' to base url 'https://app.deriv.com'.</msg>
-<status status="PASS" starttime="20230613 09:38:20.549" endtime="20230613 09:38:24.625"/>
+<msg timestamp="20230613 10:35:24.431" level="INFO">Opening browser 'Chrome' to base url 'https://app.deriv.com'.</msg>
+<status status="PASS" starttime="20230613 10:35:24.430" endtime="20230613 10:35:28.509"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>1280</arg>
 <arg>1080</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20230613 09:38:24.625" endtime="20230613 09:38:24.798"/>
+<status status="PASS" starttime="20230613 10:35:28.510" endtime="20230613 10:35:28.628"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>dt_login_button</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230613 09:38:24.798" endtime="20230613 09:38:24.852"/>
+<status status="PASS" starttime="20230613 10:35:28.629" endtime="20230613 10:35:28.697"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>dt_login_button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230613 09:38:24.854" level="INFO">Clicking element 'dt_login_button'.</msg>
-<status status="PASS" starttime="20230613 09:38:24.853" endtime="20230613 09:38:27.242"/>
+<msg timestamp="20230613 10:35:28.698" level="INFO">Clicking element 'dt_login_button'.</msg>
+<status status="PASS" starttime="20230613 10:35:28.698" endtime="20230613 10:35:31.672"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>txtEmail</arg>
-<arg>****@besquare.com.my</arg>
+<arg>hanasrullah@besquare.com.my</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230613 09:38:27.243" level="INFO">Typing text '****@besquare.com.my' into text field 'txtEmail'.</msg>
-<status status="PASS" starttime="20230613 09:38:27.243" endtime="20230613 09:38:27.307"/>
+<msg timestamp="20230613 10:35:31.673" level="INFO">Typing text 'hanasrullah@besquare.com.my' into text field 'txtEmail'.</msg>
+<status status="PASS" starttime="20230613 10:35:31.673" endtime="20230613 10:35:31.757"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>txtPass</arg>
-<arg>********</arg>
+<arg>L0ngk4ng_469227</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230613 09:38:27.307" level="INFO">Typing text '********' into text field 'txtPass'.</msg>
-<status status="PASS" starttime="20230613 09:38:27.307" endtime="20230613 09:38:27.360"/>
+<msg timestamp="20230613 10:35:31.758" level="INFO">Typing text 'L0ngk4ng_469227' into text field 'txtPass'.</msg>
+<status status="PASS" starttime="20230613 10:35:31.757" endtime="20230613 10:35:31.822"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>login</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230613 09:38:27.361" level="INFO">Clicking button 'login'.</msg>
-<status status="PASS" starttime="20230613 09:38:27.360" endtime="20230613 09:38:27.401"/>
+<msg timestamp="20230613 10:35:31.823" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" starttime="20230613 10:35:31.823" endtime="20230613 10:35:34.272"/>
 </kw>
-<status status="PASS" starttime="20230613 09:38:20.549" endtime="20230613 09:38:27.401"/>
+<status status="PASS" starttime="20230613 10:35:24.430" endtime="20230613 10:35:34.274"/>
 </kw>
-<status status="PASS" starttime="20230613 09:38:20.548" endtime="20230613 09:38:27.401"/>
-</test>
-<test id="s1-t2" name="TC02: Accessing API Token page" line="70">
 <kw name="Go to API token page">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${profile_icon}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<msg timestamp="20230613 09:38:34.230" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.231" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<status status="FAIL" starttime="20230613 09:38:27.403" endtime="20230613 09:38:34.235"/>
+<status status="PASS" starttime="20230613 10:35:34.275" endtime="20230613 10:35:34.714"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${profile_icon}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230613 09:38:34.236" endtime="20230613 09:38:34.236"/>
+<msg timestamp="20230613 10:35:34.715" level="INFO">Clicking element '//*[@class="trading-hub-header__setting"]'.</msg>
+<status status="PASS" starttime="20230613 10:35:34.714" endtime="20230613 10:35:34.815"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${api_token_tile}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" starttime="20230613 09:38:34.236" endtime="20230613 09:38:34.236"/>
+<status status="PASS" starttime="20230613 10:35:34.815" endtime="20230613 10:35:35.569"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${api_token_tile}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230613 09:38:34.236" endtime="20230613 09:38:34.237"/>
+<msg timestamp="20230613 10:35:35.571" level="INFO">Clicking element '//div[@id="/account/api-token"]'.</msg>
+<status status="PASS" starttime="20230613 10:35:35.570" endtime="20230613 10:35:35.688"/>
 </kw>
-<status status="FAIL" starttime="20230613 09:38:27.402" endtime="20230613 09:38:34.237"/>
+<status status="PASS" starttime="20230613 10:35:34.274" endtime="20230613 10:35:35.689"/>
 </kw>
-<status status="FAIL" starttime="20230613 09:38:27.402" endtime="20230613 09:38:34.237">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</status>
-</test>
-<test id="s1-t3" name="TC03: Checkbox Read" line="74">
 <kw name="Checked Read scope">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${read}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<msg timestamp="20230613 09:38:34.254" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.254" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<status status="FAIL" starttime="20230613 09:38:34.240" endtime="20230613 09:38:34.255"/>
+<status status="PASS" starttime="20230613 10:35:35.695" endtime="20230613 10:35:36.164"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${read}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230613 09:38:34.255" endtime="20230613 09:38:34.255"/>
+<msg timestamp="20230613 10:35:36.165" level="INFO">Clicking element '//*[@class="da-api-token__checkbox-wrapper"]/div[1]'.</msg>
+<status status="PASS" starttime="20230613 10:35:36.164" endtime="20230613 10:35:36.223"/>
 </kw>
-<status status="FAIL" starttime="20230613 09:38:34.239" endtime="20230613 09:38:34.255"/>
+<status status="PASS" starttime="20230613 10:35:35.694" endtime="20230613 10:35:36.225"/>
 </kw>
 <kw name="Input Token Name and create">
-<status status="NOT RUN" starttime="20230613 09:38:34.256" endtime="20230613 09:38:34.256"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_token_name}</arg>
+<arg>Token Name</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:35:36.229" level="INFO">Typing text 'Token Name' into text field '//*[@class="dc-input__field"]'.</msg>
+<status status="PASS" starttime="20230613 10:35:36.228" endtime="20230613 10:35:36.483"/>
 </kw>
-<kw name="Delete Token">
-<status status="NOT RUN" starttime="20230613 09:38:34.256" endtime="20230613 09:38:34.256"/>
-</kw>
-<status status="FAIL" starttime="20230613 09:38:34.238" endtime="20230613 09:38:34.257">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</status>
-</test>
-<test id="s1-t4" name="TC04: Checkbox Trade" line="81">
-<kw name="Checked Trade scope">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${trade}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<msg timestamp="20230613 09:38:34.268" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.268" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<status status="FAIL" starttime="20230613 09:38:34.261" endtime="20230613 09:38:34.269"/>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${create_button}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230613 10:35:36.483" endtime="20230613 10:35:36.522"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${trade}</arg>
+<arg>${create_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230613 09:38:34.269" endtime="20230613 09:38:34.269"/>
+<msg timestamp="20230613 10:35:36.523" level="INFO">Clicking element '//*[@class="dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button"]'.</msg>
+<status status="PASS" starttime="20230613 10:35:36.522" endtime="20230613 10:35:36.584"/>
 </kw>
-<status status="FAIL" starttime="20230613 09:38:34.259" endtime="20230613 09:38:34.271"/>
+<status status="PASS" starttime="20230613 10:35:36.226" endtime="20230613 10:35:36.585"/>
 </kw>
-<kw name="Input Token Name and create">
-<status status="NOT RUN" starttime="20230613 09:38:34.272" endtime="20230613 09:38:34.275"/>
-</kw>
-<kw name="Delete Token">
-<status status="NOT RUN" starttime="20230613 09:38:34.276" endtime="20230613 09:38:34.276"/>
-</kw>
-<status status="FAIL" starttime="20230613 09:38:34.258" endtime="20230613 09:38:34.277">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</status>
-</test>
-<test id="s1-t5" name="TC05: Checkbox Payments" line="88">
-<kw name="Checked Payments scope">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${payments}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<msg timestamp="20230613 09:38:34.285" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.286" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<status status="FAIL" starttime="20230613 09:38:34.279" endtime="20230613 09:38:34.286"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${copy_token}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230613 10:35:36.585" endtime="20230613 10:35:36.613"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${payments}</arg>
+<arg>${copy_token}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230613 09:38:34.287" endtime="20230613 09:38:34.287"/>
+<msg timestamp="20230613 10:35:36.614" level="INFO">Clicking element '//*[@class="dc-icon dc-clipboard"]'.</msg>
+<status status="PASS" starttime="20230613 10:35:36.613" endtime="20230613 10:35:36.684"/>
 </kw>
-<status status="FAIL" starttime="20230613 09:38:34.279" endtime="20230613 09:38:34.287"/>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>${input_token_name}</arg>
+<arg>Ctrl+V</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20230613 10:35:36.685" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20230613 10:35:36.685" endtime="20230613 10:35:36.820"/>
 </kw>
-<kw name="Input Token Name and create">
-<status status="NOT RUN" starttime="20230613 09:38:34.288" endtime="20230613 09:38:34.288"/>
-</kw>
-<kw name="Delete Token">
-<status status="NOT RUN" starttime="20230613 09:38:34.289" endtime="20230613 09:38:34.289"/>
-</kw>
-<status status="FAIL" starttime="20230613 09:38:34.278" endtime="20230613 09:38:34.289">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</status>
+<status status="PASS" starttime="20230613 10:35:24.429" endtime="20230613 10:35:36.821"/>
 </test>
-<test id="s1-t6" name="TC06: Checkbox Trading Information" line="95">
-<kw name="Checked Trading Information scope">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${trading_information}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<msg timestamp="20230613 09:38:34.296" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.296" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<status status="FAIL" starttime="20230613 09:38:34.291" endtime="20230613 09:38:34.296"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${trading_information}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230613 09:38:34.296" endtime="20230613 09:38:34.297"/>
-</kw>
-<status status="FAIL" starttime="20230613 09:38:34.290" endtime="20230613 09:38:34.297"/>
-</kw>
-<kw name="Input Token Name and create">
-<status status="NOT RUN" starttime="20230613 09:38:34.297" endtime="20230613 09:38:34.297"/>
-</kw>
-<kw name="Delete Token">
-<status status="NOT RUN" starttime="20230613 09:38:34.297" endtime="20230613 09:38:34.297"/>
-</kw>
-<status status="FAIL" starttime="20230613 09:38:34.290" endtime="20230613 09:38:34.297">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</status>
-</test>
-<test id="s1-t7" name="TC07: Checkbox Admin" line="102">
-<kw name="Checked Admin scope">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${admin}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<msg timestamp="20230613 09:38:34.303" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.304" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<status status="FAIL" starttime="20230613 09:38:34.298" endtime="20230613 09:38:34.304"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${admin}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230613 09:38:34.304" endtime="20230613 09:38:34.304"/>
-</kw>
-<status status="FAIL" starttime="20230613 09:38:34.298" endtime="20230613 09:38:34.304"/>
-</kw>
-<kw name="Input Token Name and create">
-<status status="NOT RUN" starttime="20230613 09:38:34.305" endtime="20230613 09:38:34.305"/>
-</kw>
-<kw name="Delete Token">
-<status status="NOT RUN" starttime="20230613 09:38:34.305" endtime="20230613 09:38:34.305"/>
-</kw>
-<status status="FAIL" starttime="20230613 09:38:34.298" endtime="20230613 09:38:34.305">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</status>
-</test>
-<test id="s1-t8" name="TC08: Display token list and information" line="109">
-<kw name="Checked Trade scope">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${trade}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<msg timestamp="20230613 09:38:34.316" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.317" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<status status="FAIL" starttime="20230613 09:38:34.309" endtime="20230613 09:38:34.317"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${trade}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230613 09:38:34.317" endtime="20230613 09:38:34.317"/>
-</kw>
-<status status="FAIL" starttime="20230613 09:38:34.306" endtime="20230613 09:38:34.317"/>
-</kw>
-<kw name="Input Token Name and create">
-<status status="NOT RUN" starttime="20230613 09:38:34.317" endtime="20230613 09:38:34.317"/>
-</kw>
-<status status="FAIL" starttime="20230613 09:38:34.306" endtime="20230613 09:38:34.318">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</status>
-</test>
-<test id="s1-t9" name="TC09: Delete token" line="116">
-<kw name="Checked Read scope">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${read}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<msg timestamp="20230613 09:38:34.325" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.325" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<status status="FAIL" starttime="20230613 09:38:34.319" endtime="20230613 09:38:34.325"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${read}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230613 09:38:34.325" endtime="20230613 09:38:34.325"/>
-</kw>
-<status status="FAIL" starttime="20230613 09:38:34.318" endtime="20230613 09:38:34.326"/>
-</kw>
-<kw name="Checked Trade scope">
-<status status="NOT RUN" starttime="20230613 09:38:34.326" endtime="20230613 09:38:34.326"/>
-</kw>
-<kw name="Checked Payments scope">
-<status status="NOT RUN" starttime="20230613 09:38:34.326" endtime="20230613 09:38:34.326"/>
-</kw>
-<kw name="Checked Trading Information scope">
-<status status="NOT RUN" starttime="20230613 09:38:34.326" endtime="20230613 09:38:34.326"/>
-</kw>
-<kw name="Checked Admin scope">
-<status status="NOT RUN" starttime="20230613 09:38:34.326" endtime="20230613 09:38:34.326"/>
-</kw>
-<kw name="Input Token Name and create">
-<status status="NOT RUN" starttime="20230613 09:38:34.326" endtime="20230613 09:38:34.326"/>
-</kw>
-<kw name="Delete Token">
-<status status="NOT RUN" starttime="20230613 09:38:34.326" endtime="20230613 09:38:34.326"/>
-</kw>
-<status status="FAIL" starttime="20230613 09:38:34.318" endtime="20230613 09:38:34.326">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</status>
-</test>
-<test id="s1-t10" name="TC10: Copy paste token into application" line="126">
-<status status="FAIL" starttime="20230613 09:38:34.327" endtime="20230613 09:38:34.328">Test contains no keywords.</status>
-</test>
-<test id="s1-t11" name="TC11: Show token key" line="128">
-<status status="FAIL" starttime="20230613 09:38:34.328" endtime="20230613 09:38:34.328">Test contains no keywords.</status>
-</test>
-<test id="s1-t12" name="TC12: Hide token key" line="130">
-<status status="FAIL" starttime="20230613 09:38:34.329" endtime="20230613 09:38:34.329">Test contains no keywords.</status>
-</test>
-<status status="FAIL" starttime="20230613 09:38:20.443" endtime="20230613 09:38:34.329"/>
+<status status="PASS" starttime="20230613 10:35:24.325" endtime="20230613 10:35:36.822"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="11" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="11" skip="0" id="s1" name="Project 1">Project 1</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Project 1">Project 1</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230613 09:38:34.230" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.254" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.268" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.285" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.296" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.303" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.316" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
-<msg timestamp="20230613 09:38:34.325" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=113.0.5672.126)
-Stacktrace:
-#0 0x55897a92e133 &lt;unknown&gt;
-#1 0x55897a662966 &lt;unknown&gt;
-#2 0x55897a63ccec &lt;unknown&gt;
-#3 0x55897a6c3c0f &lt;unknown&gt;
-#4 0x55897a6d6c2b &lt;unknown&gt;
-#5 0x55897a6be9a3 &lt;unknown&gt;
-#6 0x55897a69346a &lt;unknown&gt;
-#7 0x55897a69455e &lt;unknown&gt;
-#8 0x55897a8edcae &lt;unknown&gt;
-#9 0x55897a8f18fe &lt;unknown&gt;
-#10 0x55897a8faf20 &lt;unknown&gt;
-#11 0x55897a8f2923 &lt;unknown&gt;
-#12 0x55897a8c5c0e &lt;unknown&gt;
-#13 0x55897a915b08 &lt;unknown&gt;
-#14 0x55897a915c97 &lt;unknown&gt;
-#15 0x55897a926113 &lt;unknown&gt;
-#16 0x7f66ca494b43 &lt;unknown&gt;
-</msg>
+<msg timestamp="20230613 10:35:36.685" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
 </errors>
 </robot>

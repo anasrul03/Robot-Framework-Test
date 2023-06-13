@@ -2,10 +2,12 @@
 Library    SeleniumLibrary
 
 
-
 *** Variables ***
 ${profile_icon}    //*[@class="trading-hub-header__setting"]
 ${api_token_tile}    //div[@id="/account/api-token"]
+${copy_token}    //*[@class="dc-icon dc-clipboard"]
+${token_visibility}    //*[@class="dc-icon da-api-token__visibility-icon"]
+
 #CRUD token
 ${input_token_name}    //*[@class="dc-input__field"]
 ${create_button}    //*[@class="dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button"]
@@ -25,8 +27,8 @@ Log in to deriv
     Set Window Size    1280    1080
     Wait Until Page Contains Element    dt_login_button    10
     Click Element    dt_login_button
-    Input Text    txtEmail    ****@besquare.com.my
-    Input Text    txtPass    ********
+    Input Text    txtEmail    ******
+    Input Text    txtPass    ******
     Click Button    login
 
 Go to API token page
@@ -61,6 +63,9 @@ Delete Token
     Click Element    ${delete_token_icon}
     Wait Until Element Is Visible    ${confirm_delete}
     Click Element    ${confirm_delete}
+
+Wait for new token displayed
+    Wait Until Element Is Visible    //*[@class="da-api-token__table-cell-row"]    10
 
 
 *** Test Cases ***
@@ -111,6 +116,7 @@ TC08: Display token list and information
     # Go to API token page
     Checked Trade scope
     Input Token Name and create
+    Wait for new token displayed
     
 
 TC09: Delete token
@@ -124,9 +130,31 @@ TC09: Delete token
     Input Token Name and create
     Delete Token
 TC10: Copy paste token into application
+    # Log in to deriv
+    # Go to API token page
+    Checked Read scope
+    Input Token Name and create
+    Wait Until Element Is Visible    ${copy_token}
+    Click Element    ${copy_token}
 
 TC11: Show token key
+    # Log in to deriv
+    # Go to API token page
+    Checked Read scope
+    Input Token Name and create
+    Wait Until Element Is Visible    ${token_visibility}    10
+    Click Element    ${token_visibility}
+    Wait Until Element Does Not Contain    //*[@class="da-api-token__clipboard-wrapper"]    ............
+    
 
 TC12: Hide token key
-
+    # Log in to deriv
+    # Go to API token page
+    Checked Read scope
+    Input Token Name and create
+    Wait Until Element Is Visible    ${token_visibility}    10
+    Click Element    ${token_visibility}
+    Get Element Attribute    locator    attribute
+    Click Element    ${token_visibility}
+    Click Element    ${token_visibility}
 
